@@ -23,9 +23,9 @@ def execute_sql(sql, values(), commit = False, single = False):
     cursor.close()
     return results
 
-@app.teardown_appcontet
+@app.teardown_appcontext
 def close_connection():
-    connection = getatr(g,'_connection',None)
+    connection = getattr(g,'_connection',None)
     if connection is not None:
         connection.close()
 
