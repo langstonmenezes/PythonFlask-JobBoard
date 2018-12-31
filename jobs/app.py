@@ -1,4 +1,4 @@
-import sqlite3
+import sqlite
 from flask import Flask, render_template, g
 
 PATH = 'db/jobs.sqlite'
